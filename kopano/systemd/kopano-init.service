@@ -1,0 +1,14 @@
+[Unit]
+After=kopano-server.service
+ConditionPathExists=!/var/lib/kopano/initialized
+
+[Service]
+Type=oneshot
+ExecStart=sleep 3
+ExecStart=kopano-admin -s
+ExecStart=kopano-admin --sync
+ExecStartPost=/usr/bin/touch /var/lib/kopano/initialized
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

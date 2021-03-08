@@ -1,0 +1,19 @@
+[Unit]
+RequiresMountsFor=/etc/letsencrypt /var/lib/postfix /var/spool/postfix /var/lib/mysql /var/lib/ldap /var/lib/kopano
+Before=postfix.service mariadb.service slapd.service kopano-server.service kopano-kwebd.service
+
+[Service]
+Type=oneshot
+ExecStart=chown -R postfix:postfix /var/lib/postfix
+ExecStart=chown -R postfix:postfix /var/spool/postfix
+ExecStart=chown -R mysql:mysql /var/lib/mysql
+ExecStart=chown -R openldap:openldap /var/lib/ldap
+ExecStart=chown -R kopano:kopano /var/lib/kopano
+#ExecStart=chown -R kopano:kopano /var/lib/kopano-grapi
+#ExecStart=chown -R kopano:kopano /var/lib/kopano-kdav
+#ExecStart=chown -R www-data:www-data /var/lib/kopano-webapp
+#ExecStart=chown -R kopano:kopano /var/lib/z-push
+RemainAfterExit=yes
+
+[Install]
+WantedBy=basic.target

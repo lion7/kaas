@@ -1,0 +1,25 @@
+{
+  "organization": "Example Corp",
+  "domain": "example.com",
+  "hostname": "mail.example.com",
+  "postmaster": "vader@example.com",
+  "license": "some-license-string",
+  "adminPassword": "my-secret-password",
+  "defaultRedirectEnabled": true,
+  "users": [
+    {
+      "username": "admin",
+      "password": "my-secret-password",
+      "givenName": "Darth",
+      "surName": "Vader",
+      "admin": true
+    },
+    {
+      "username": "employee",
+      "password": "my-secret-password",
+      "givenName": "John",
+      "surName": "Doe",
+      "admin": false
+    }
+  ]
+}
