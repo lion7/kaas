@@ -1,6 +1,6 @@
 "
-dn: ou=\(.organization),dc=\(.domain | split(".") | join(",dc="))
+dn: ou=\(.organizationalUnit),dc=\(.domain | split(".") | join(",dc="))
 objectClass: organizationalUnit
 objectClass: top
-ou: \(.organization)
+ou: \(.organizationalUnit)
 "

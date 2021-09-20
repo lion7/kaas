@@ -15,6 +15,7 @@ jq -rf postfix/ldap-users.cf.jq < "${CONFIG_JSON}" > /etc/postfix/ldap-users.cf
 jq -rf postfix/main.cf.jq < "${CONFIG_JSON}" > /etc/postfix/main.cf
 
 # Modify the default Kopano configuration files
+jq -rf kopano/config.php.jq < "${CONFIG_JSON}" >> /etc/kopano/webapp/config.php
 jq -rf kopano/dagent.cfg.jq < "${CONFIG_JSON}" >> /etc/kopano/dagent.cfg
 jq -rf kopano/gateway.cfg.jq < "${CONFIG_JSON}" >> /etc/kopano/gateway.cfg
 jq -rf kopano/kapid.cfg.jq < "${CONFIG_JSON}" >> /etc/kopano/kapid.cfg

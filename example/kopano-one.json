@@ -1,8 +1,8 @@
 {
-  "organization": "Example Corp",
   "domain": "example.com",
   "hostname": "mail.example.com",
   "postmaster": "vader@example.com",
+  "organizationalUnit": "example",
   "license": "some-license-string",
   "adminPassword": "my-secret-password",
   "defaultRedirectEnabled": true,
