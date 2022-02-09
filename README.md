@@ -14,7 +14,7 @@ sudo podman run --name kaas --restart=always --systemd=always --privileged --tty
                 -v postfix-spool:/var/spool/postfix \
                 -v mysql:/var/lib/mysql \
                 -v ldap:/var/lib/ldap \
-                docker.pkg.github.com/lion7/kaas/kaas:latest
+                ghcr.io/lion7/kaas/kopano:latest
 ```
 
 ## Enter a bash shell inside the pod

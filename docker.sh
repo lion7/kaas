@@ -12,4 +12,4 @@ docker run --name kaas --restart=no --privileged=true --tty --detach \
            -p 25:25 -p 80:80 -p 443:443 -p 465:465 -p 587:587 \
            -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
            --tmpfs /tmp --tmpfs /run --tmpfs /sys/fs/cgroup/systemd --tmpfs /var/lib/journal \
-           docker.pkg.github.com/lion7/kaas/kaas:latest
+           ghcr.io/lion7/kaas/kopano:latest

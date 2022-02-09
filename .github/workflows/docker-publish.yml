@@ -25,7 +25,7 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: "${{ secrets.GITHUB_TOKEN }}"
-          registry: docker.pkg.github.com
+          registry: ghcr.io
           image_name: kopano
           context: kopano
           push_git_tag: true

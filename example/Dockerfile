@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/lion7/kaas/kopano:latest
+FROM ghcr.io/lion7/kaas/kopano:latest
 
 # Copy JSON
 COPY kopano-one.json /etc/konfig/kopano-one.json

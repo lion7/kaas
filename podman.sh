@@ -6,10 +6,10 @@ sudo podman run --name kaas --restart=always --systemd=always --privileged --tty
                 -v postfix-spool:/var/spool/postfix \
                 -v mysql:/var/lib/mysql \
                 -v ldap:/var/lib/ldap \
-                docker.pkg.github.com/lion7/kaas/kaas:latest
+                ghcr.io/lion7/kaas/kopano:latest
 #                -v kopano:/var/lib/kopano \
 #                -v kopano-grapi:/var/lib/kopano-grapi \
 #                -v kopano-kdav:/var/lib/kopano-kdav \
 #                -v kopano-webapp:/var/lib/kopano-webapp \
 #                -v kopano-zpush:/var/lib/z-push \
-#                docker.pkg.github.com/lion7/kaas/kopano:latest
+#                ghcr.io/lion7/kaas/kopano:latest
